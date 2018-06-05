@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if [ -f /key/nsupdate.key ] && [ ${DNS_SERVER+set} ] && [ ${HOST+set} ] && [ ${DOMAIN+set} ] && [ ${TTL+set} ] && [ ${IP+set} ] ;then
+if [ -f /key/nsupdate.key ]  && [ -f /key/nsupdate.private ] && [ ${DNS_SERVER+set} ] && [ ${HOST+set} ] && [ ${DOMAIN+set} ] && [ ${TTL+set} ] && [ ${IP+set} ] ;then
 
 echo "server ${DNS_SERVER} \
 update add ${HOST}.${DOMAIN} ${TTL} IN A ${IP} \
